@@ -15,14 +15,23 @@
     } elseif (has_length($first_name, array(2, 255))) {
       $errors[] = 'Please enter your first name between 2 and 255 characters.';
     }
-    if (is_blank($last_name) {
+
+    if (is_blank($last_name)) {
       $errors[] = 'Please enter your last name.';
+    }  elseif (has_length($last_name, array(2, 255))) {
+      $errors[] = 'Please enter your last name between 2 and 255 characters.';
     }
-    if (is_blank($email) {
+
+    if (is_blank($email)) {
       $errors[] = 'Please enter your email.';
+    } elseif (has_length($email, array(2, 255))) {
+      $errors[] = 'Please enter an email between 2 and 255 characters.';
     }
-    if (is_blank($username) {
+
+    if (is_blank($username)) {
       $errors[] = 'Please enter your desired username.';
+    } elseif (has_length($first_name, array(8, 255))) {
+      $errors[] = 'Please enter a username between 2 and 255 characters.';
     }
 
     has_length($first_name, array(2, 255));
@@ -43,7 +52,7 @@
   <p>Register to become a Globitek Partner.</p>
 
   <?php
-    display_errors($errors);
+    echo display_errors($errors);
   ?>
 
   <form name="htmlform" method="post" action="register.php">

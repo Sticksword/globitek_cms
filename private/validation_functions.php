@@ -8,7 +8,7 @@
   // has_length('abcd', ['min' => 3, 'max' => 5])
   function has_length($value, $options=array()) {
     $len = strlen($value);
-    return $length >= $options[0] && $length <= $options[1];
+    return $len >= $options[0] && $len <= $options[1];
   }
 
   // has_valid_email_format('test@test.com')
