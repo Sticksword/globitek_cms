@@ -20,6 +20,7 @@ define("PUBLIC_PATH", PROJECT_PATH . '/public');
 require_once('functions.php');
 require_once('database.php');
 require_once('query_functions.php');
+require_once('insert_functions.php');
 require_once('validation_functions.php');
 
 $db = db_connect();
