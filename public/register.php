@@ -12,30 +12,35 @@
     // ideally refactor so not repeating myself
     if (is_blank($first_name)) { // kind of unnecessary since next check encompasses it
       $errors[] = 'Please enter your first name.';
-    } elseif (has_length($first_name, array(2, 255))) {
+    } elseif (!has_length($first_name, array(2, 255))) {
       $errors[] = 'Please enter your first name between 2 and 255 characters.';
+    } elseif (!has_valid_name_format($first_name)) {
+      $errors[] = 'First name can only letters, spaces, and symbols: - , . \'';
     }
 
     if (is_blank($last_name)) {
       $errors[] = 'Please enter your last name.';
-    }  elseif (has_length($last_name, array(2, 255))) {
+    }  elseif (!has_length($last_name, array(2, 255))) {
       $errors[] = 'Please enter your last name between 2 and 255 characters.';
+    } elseif (!has_valid_username_format($last_name)) {
+      $errors[] = 'Last name can only letters, spaces, and symbols: - , . \'';
     }
 
     if (is_blank($email)) {
       $errors[] = 'Please enter your email.';
-    } elseif (has_length($email, array(2, 255))) {
+    } elseif (!has_length($email, array(2, 255))) {
       $errors[] = 'Please enter an email between 2 and 255 characters.';
+    } elseif (!has_valid_email_format($email)) {
+      $errors[] = 'Please enter a valid email address. It can only contain letters, numbers, and symbols: _ @ .';
     }
 
     if (is_blank($username)) {
       $errors[] = 'Please enter your desired username.';
-    } elseif (has_length($first_name, array(8, 255))) {
+    } elseif (!has_length($username, array(8, 255))) {
       $errors[] = 'Please enter a username between 2 and 255 characters.';
+    } elseif (!has_valid_username_format($username)) {
+      $errors[] = 'Username can only contain letters, numbers, and symbols: _';
     }
-
-    has_length($first_name, array(2, 255));
-    has_valid_email_format($email);
 
     if (count($errors) == 0) {
       insert($first_name, $last_name, $email, $username);
@@ -49,7 +54,7 @@
 
 <div id="main-content">
   <h1>Register</h1>
-  <p>Register to become a Globitek Partner.</p>
+  <p>Register to become a Globitek Partner!</p>
 
   <?php
     echo display_errors($errors);

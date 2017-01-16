@@ -46,7 +46,7 @@ The following advanced user stories are optional:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://imgur.com/VjufbOs.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
@@ -54,6 +54,4 @@ GIF created with [LiceCap](http://www.cockos.com/licecap/).
 
 Describe any challenges encountered while building the app.
 
-Getting everything set up
-
-Bonus 2 and using the right methods. It was easy to do, but you had to use the right methods because some are deprecated
+Trying to pick out what is deprecated and what's not in PHP.
