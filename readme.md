@@ -1,8 +1,8 @@
 # Project 1 - Globitek CMS
 
-Time spent: **11** hours spent in total
+Time spent: **7** hours spent in total
 
-Project By: Rupin Bhalla
+Project By: Michael Chen
 
 ## User Stories
 
